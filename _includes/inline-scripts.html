@@ -1,0 +1,60 @@
+        <script type="text/javascript" src="js/prefixfree.min.js"></script>
+        <script type="text/javascript" src="js/modernizr.custom.40443.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/easing.js"></script>
+        <script type="text/javascript" src="js/smoothzoom.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script>
+            (function() {
+                var container = document.getElementById('container'),
+                    trigger = container.querySelector('button.trigger');
+                    
+                function toggleContent() {
+                    if (classie.has(container, 'container--open' )) {
+                        classie.remove(container, 'container--open');
+                        classie.remove(trigger, 'trigger--active');
+                        window.addEventListener('scroll', noscroll);
+                    } else {
+                        classie.add(container, 'container--open');
+                        classie.add(trigger, 'trigger--active');
+                        window.removeEventListener('scroll', noscroll);
+                    }
+                }
+                
+                function noscroll() { window.scrollTo( 0, 0 ); }
+                
+                // reset scrolling position
+                document.body.scrollTop = document.documentElement.scrollTop = 0;
+                
+                // disable scrolling
+                window.addEventListener('scroll', noscroll);
+                trigger.addEventListener('click', toggleContent);
+                
+                // For Demo purposes only (prevent jump on click)
+                // [].slice.call(
+                //     document.querySelectorAll('.items-wrap a')
+                // ).forEach(function (el) {
+                //     el.onclick = function() { return false; }
+                // });
+                
+                /*
+                $('.item').slideshow({
+                    width   : 500,
+                    height  : 500,
+                    onLoad  : function() {
+                        if( !Modernizr.csstransforms3d )
+                            $('#fd-message').show();
+                    }
+                });
+                */
+                
+            })();
+            
+            $(window).load( function() {
+                $('img.item__image').smoothZoom({
+                    zoominSpeed: 200,
+                    zoomoutSpeed: 100
+                });
+            });
+            
+        </script>

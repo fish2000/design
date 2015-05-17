@@ -1,0 +1,18 @@
+
+# Permalinks
+permalink:        pretty
+relative_permalinks: true
+
+# Setup
+title:            'One And Done'
+tagline:          'Select Graphic Design Projects'
+description:      'Alexander Böhn &mdash; Hybrid Design / Development'
+url:              http://fish2000.github.io
+baseurl:          /design
+
+author:
+  name:           'Alexander Böhn'
+  url:            https://twitter.com/fish2000
+
+github:
+  repo:           https://github.com/fish2000/design
