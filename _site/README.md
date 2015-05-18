@@ -1,16 +1,7 @@
-Sliding Header Layout
-=========
+One And Done: Quickie Portfolio Site
+====================================
 
-A layout with a fullscreen header that slides up to reveal a content area with an image grid.
+Based heavily on [this lovely demo](http://tympanus.net/Development/SlidingHeaderLayout/),
+jQuery, Jekyll, and many other parts and pieces which I will list here in short order…
+thank all of you much for those resources you furnished.
 
-[Article on Codrops](http://tympanus.net/codrops/?p=21934)
-
-[Demo](http://tympanus.net/Development/SlidingHeaderLayout/)
-
-Integrate or build upon it for free in your personal or commercial projects. Don't republish, redistribute or sell "as-is". 
-
-Read more here: [License](http://tympanus.net/codrops/licensing/)
-
-Follow us: [Twitter](http://www.twitter.com/codrops), [Facebook](http://www.facebook.com/pages/Codrops/159107397912), [Google+](https://plus.google.com/101095823814290637419), [GitHub](https://github.com/codrops), [Pinterest](http://www.pinterest.com/codrops/)
-
-[© Codrops 2014](http://www.codrops.com)
