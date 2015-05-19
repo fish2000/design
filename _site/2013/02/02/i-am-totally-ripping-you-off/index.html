@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-site-verification" content="yZvCYZrEdmo9n-oC7k50zPknTDa-fhcee-2ew-Rv3lM" />
         <title>One And Done</title>
         <meta name="description" content="Alexander Böhn &mdash; Hybrid Design / Development" />
         <meta name="keywords" content="fullscreen image, grid layout, flexbox grid, transition" />
@@ -247,25 +248,15 @@
                 window.addEventListener('scroll', noscroll);
                 trigger.addEventListener('click', toggleContent);
                 
-                // For Demo purposes only (prevent jump on click)
-                // [].slice.call(
-                //     document.querySelectorAll('.items-wrap a')
-                // ).forEach(function (el) {
-                //     el.onclick = function() { return false; }
-                // });
-                
-                /*
-                $('.item').slideshow({
-                    width   : 500,
-                    height  : 500,
-                    onLoad  : function() {
-                        if( !Modernizr.csstransforms3d )
-                            $('#fd-message').show();
-                    }
-                });
-                */
-                
             })();
+            
+            /*
+            $(document).ready(function () {
+                /// from 'Simplest jQuery Slideshow' : http://snook.ca/technical/fade/fade.html
+                  $('.fadelinks > :gt(0)').hide();
+                  setInterval(function(){$('.fadelinks > :first-child').fadeOut().next().fadeIn().end().appendTo('.fadelinks');}, 3000);
+            });
+            */
             
             $(window).load( function() {
                 $('img.item__image').smoothZoom({

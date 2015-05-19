@@ -30,25 +30,15 @@
                 window.addEventListener('scroll', noscroll);
                 trigger.addEventListener('click', toggleContent);
                 
-                // For Demo purposes only (prevent jump on click)
-                // [].slice.call(
-                //     document.querySelectorAll('.items-wrap a')
-                // ).forEach(function (el) {
-                //     el.onclick = function() { return false; }
-                // });
-                
-                /*
-                $('.item').slideshow({
-                    width   : 500,
-                    height  : 500,
-                    onLoad  : function() {
-                        if( !Modernizr.csstransforms3d )
-                            $('#fd-message').show();
-                    }
-                });
-                */
-                
             })();
+            
+            /*
+            $(document).ready(function () {
+                /// from 'Simplest jQuery Slideshow' : http://snook.ca/technical/fade/fade.html
+                  $('.fadelinks > :gt(0)').hide();
+                  setInterval(function(){$('.fadelinks > :first-child').fadeOut().next().fadeIn().end().appendTo('.fadelinks');}, 3000);
+            });
+            */
             
             $(window).load( function() {
                 $('img.item__image').smoothZoom({
