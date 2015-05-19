@@ -6,5 +6,21 @@
 
   ga('create', 'UA-63067936-1', 'auto');
   ga('send', 'pageview');
+  
+  
+  function addListener(element, type, callback) {
+      if (element.addEventListener) element.addEventListener(type, callback);
+      else if (element.attachEvent) element.attachEvent('on' + type, callback);
+  }
+  
+  var items = document.querySelectorAll(".item");
+  [].forEach.call(items, function (item) {
+      addListener(item, 'click', function () {
+          ga('send', 'event', 'category', 'action',
+              { 'post-view':    item.getAttribute('data-post') });
+          ga('send', 'event', 'category', 'action',
+              { 'image-view':   item.getAttribute('data-image-src') });
+      });
+  });
 
 </script>

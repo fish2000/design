@@ -1,7 +1,9 @@
             <section class="items-wrap fd-wrapper" id="fd-wrapper">
                 {% for post in site.posts %}
                     {% assign image = post.images[0] %}
-                    <a href="{{ site.baseurl }}/img/behance/{{ image.image }}" class="item">
+                    <a href="{{ site.baseurl }}/img/behance/{{ image.image }}" class="item"
+                        data-post="{{ post.title | slugify }}"
+                        data-image-src="{{ image.src }}">
                         <img class="item__image"
                             data-smoothzoom="group-{{ post.title | slugify }}"
                             src="{{ site.baseurl }}/img/behance/{{ image.thumbnail }}"
